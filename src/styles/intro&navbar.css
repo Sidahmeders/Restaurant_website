@@ -9,12 +9,15 @@ body {
   overflow-x: hidden;
 }
 
+<<<<<<< HEAD
 @media (max-width: 1050px) {
   body {
     display: none !important;
   }
 }
 
+=======
+>>>>>>> 1df5ad4205e3e785f13e5a8197502c962fe8779a
 main .side-bar {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #333333;
