@@ -1,0 +1,247 @@
+main .images-section {
+  overflow: hidden;
+  margin-left: 15%;
+}
+
+main .images-section section {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .images-section section .slidershow {
+  width: 85%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+main .images-section section .slidershow .slides {
+  width: 400%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .images-section section .slidershow .slides input[name="w"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+main .images-section section .slidershow .slides #w1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+main .images-section section .slidershow .slides #w2:checked ~ .s1 {
+  margin-left: -25%;
+}
+
+main .images-section section .slidershow .slides #w3:checked ~ .s1 {
+  margin-left: -50%;
+}
+
+main .images-section section .slidershow .slides #w4:checked ~ .s1 {
+  margin-left: -75%;
+}
+
+main .images-section section .slidershow .slides .slide {
+  width: 25%;
+  background: url("../resto-img/breakfest.jpg");
+  background-size: cover;
+}
+
+main .images-section section .slidershow .slides .slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+main .images-section section .slidershow .slides .slide img {
+  width: 100%;
+  height: 100%;
+  -webkit-animation: move 50s infinite;
+          animation: move 50s infinite;
+}
+
+main .images-section section .slidershow .slides .slide span {
+  font-size: 2.5em;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  position: absolute;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+main .images-section section .slidershow .slides .slide span p {
+  background: transparent;
+  width: 70%;
+}
+
+main .images-section section .slidershow .slides .slide span h2 {
+  font-weight: 200;
+}
+
+main .images-section section .slidershow .slides .slide span h4 {
+  font-weight: 100;
+}
+
+@-webkit-keyframes move {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0%;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  95% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -400%;
+  }
+}
+
+@keyframes move {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0%;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  95% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -400%;
+  }
+}
+
+main .images-section section .slidershow .navigation {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main .images-section section .slidershow .navigation .bar {
+  width: 25px;
+  height: 18px;
+  border-radius: 20px;
+  border: 1px solid white;
+  margin: 5px 30px;
+  background: rgba(216, 216, 216, 0.226);
+  cursor: pointer;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+main .images-section section .slidershow .navigation .bar:focus {
+  background: yellow;
+}
+
+main .images-section section .slidershow .navigation .bar:hover {
+  background: #f0f0f0;
+}
+
+main .menus-section {
+  overflow: hidden;
+  margin-left: 15%;
+}
+
+main .menus-section section {
+  width: 100%;
+  height: 100vh;
+  background: whitesmoke;
+}
+
+main .undefined-sections {
+  overflow: hidden;
+  margin-left: 15%;
+}
+
+main .undefined-sections section {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .undefined-sections section p {
+  text-align: center;
+  font-size: 2.2em;
+  background: #fff;
+  padding: 10px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+main .undefined-sections section:nth-child(1) {
+  background: #13eb49;
+}
+
+main .undefined-sections section:nth-child(2) {
+  background: #ebd613;
+}
+
+main .undefined-sections section:nth-child(3) {
+  background: #d15f32;
+}
+
+main .undefined-sections section:nth-child(4) {
+  background: #d132c9;
+}
+/*# sourceMappingURL=mainSections.css.map */
