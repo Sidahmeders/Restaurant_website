@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 1050px) {
+  body {
+    display: none !important;
+  }
+}
+
+main .side-bar {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #333333;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 15%;
+  height: 100%;
+  text-transform: uppercase;
+  z-index: 5;
+  -webkit-box-shadow: 1px -2px 3px rgba(255, 217, 0, 0.801);
+          box-shadow: 1px -2px 3px rgba(255, 217, 0, 0.801);
+}
+
+main .side-bar .logo {
+  text-align: center;
+  margin-top: 2.2em;
+  text-decoration: none;
+  display: block;
+}
+
+main .side-bar .logo .fa-gitkraken {
+  font-size: 3em;
+  color: #72746b;
+  -webkit-transform: translate(-5px, 25px);
+          transform: translate(-5px, 25px);
+  text-shadow: 3px 3px 6px black;
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+
+main .side-bar .logo .fa-gitkraken:hover {
+  text-shadow: 2px 2px 5px white;
+}
+
+main .side-bar .logo h1 {
+  display: block;
+  padding: 35px 0;
+  width: 100%;
+  color: #f7f7f7;
+  font-weight: 300;
+  text-shadow: 2px 2px 7px #850000;
+}
+
+main .side-bar .logo p {
+  font-size: .7em;
+  -webkit-transform: translate(-4px, -38px);
+          transform: translate(-4px, -38px);
+  color: rgba(218, 218, 218, 0.411);
+  text-shadow: 1px 1px 7px #fdfdfd;
+  margin-top: 1em;
+}
+
+main .side-bar ul li {
+  padding: 10px;
+  margin-top: 8%;
+  margin-right: 3%;
+  list-style: none;
+  text-align: center;
+  position: relative;
+  font-size: 1.2em;
+}
+
+main .side-bar ul li a {
+  color: #d7d9db;
+  text-shadow: 1px 1px 1px #575252;
+  display: block;
+  text-decoration: none;
+  letter-spacing: 1px;
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+
+main .side-bar ul li a:hover {
+  color: white;
+  text-shadow: 3px 3px 9px black;
+}
+
+main .side-bar ul li a:before, main .side-bar ul li a:after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  background-color: rgba(188, 226, 226, 0.801);
+  left: 20%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+main .side-bar ul li a:before {
+  top: 0;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+main .side-bar ul li a:after {
+  bottom: 0;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+main .side-bar ul li a:hover:before, main .side-bar ul li a:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+main .side-bar ul li a i {
+  margin-right: 10px;
+}
+
+main .side-bar .p {
+  font-weight: 100;
+  text-align: center;
+  margin-top: 20%;
+  text-transform: lowercase;
+  color: rgba(250, 244, 158, 0.801);
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+  font-size: .9em;
+}
+
+main .side-bar .p p {
+  margin-top: 3px;
+}
+
+main .images-section {
+  overflow: hidden;
+  margin-left: 15%;
+}
+
+main .images-section section {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .images-section section .slidershow {
+  width: 85%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+main .images-section section .slidershow .slides {
+  width: 400%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .images-section section .slidershow .slides input[name="w"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+main .images-section section .slidershow .slides #w1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+main .images-section section .slidershow .slides #w2:checked ~ .s1 {
+  margin-left: -25%;
+}
+
+main .images-section section .slidershow .slides #w3:checked ~ .s1 {
+  margin-left: -50%;
+}
+
+main .images-section section .slidershow .slides #w4:checked ~ .s1 {
+  margin-left: -75%;
+}
+
+main .images-section section .slidershow .slides .slide {
+  width: 25%;
+  background: url("../resto-img/breakfest.jpg");
+  background-size: cover;
+}
+
+main .images-section section .slidershow .slides .slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+main .images-section section .slidershow .slides .slide img {
+  width: 100%;
+  height: 100%;
+  -webkit-animation: move 50s infinite;
+          animation: move 50s infinite;
+}
+
+main .images-section section .slidershow .slides .slide span {
+  font-size: 2.5em;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  position: absolute;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+main .images-section section .slidershow .slides .slide span p {
+  background: transparent;
+  width: 70%;
+}
+
+main .images-section section .slidershow .slides .slide span h2 {
+  font-weight: 200;
+}
+
+main .images-section section .slidershow .slides .slide span h4 {
+  font-weight: 100;
+}
+
+@-webkit-keyframes move {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0%;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  95% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -400%;
+  }
+}
+
+@keyframes move {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0%;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  95% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -400%;
+  }
+}
+
+main .images-section section .slidershow .navigation {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main .images-section section .slidershow .navigation .bar {
+  width: 25px;
+  height: 18px;
+  border-radius: 20px;
+  border: 1px solid white;
+  margin: 5px 30px;
+  background: rgba(216, 216, 216, 0.226);
+  cursor: pointer;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+main .images-section section .slidershow .navigation .bar:focus {
+  background: yellow;
+}
+
+main .images-section section .slidershow .navigation .bar:hover {
+  background: #f0f0f0;
+}
+
+main .menus-section {
+  overflow: hidden;
+  margin-left: 15%;
+}
+
+main .menus-section section {
+  width: 100%;
+  height: 100vh;
+  background: whitesmoke;
+}
+
+main .undefined-sections {
+  overflow: hidden;
+  margin-left: 15%;
+}
+
+main .undefined-sections section {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .undefined-sections section p {
+  text-align: center;
+  font-size: 2.2em;
+  background: #fff;
+  padding: 10px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+main .undefined-sections section:nth-child(1) {
+  background: #13eb49;
+}
+
+main .undefined-sections section:nth-child(2) {
+  background: #ebd613;
+}
+
+main .undefined-sections section:nth-child(3) {
+  background: #d15f32;
+}
+
+main .undefined-sections section:nth-child(4) {
+  background: #d132c9;
+}
+/*# sourceMappingURL=intro&navbar.css.map */

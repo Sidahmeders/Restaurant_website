@@ -1,0 +1,36 @@
+@mixin mediaXXL {
+    @media (max-width:1050px) {
+        @content;
+    }
+}
+
+@mixin mediaXL {
+    
+}
+
+@mixin mediaL {
+    
+}
+
+@mixin mediaM {
+    
+}
+
+@mixin mediaS {
+
+}
+
+@include mediaXXL {
+    body {
+        display: none !important;
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,159 @@
+
+main {
+
+    .images-section {
+        overflow: hidden;
+        margin-left: 15%;
+    
+        section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .slidershow {
+                width: 85%;
+                height: 100%;
+                overflow: hidden;
+                position: absolute;
+
+                .slides {
+                    width: 400%;
+                    height: 100%;
+                    display: flex;
+
+                    input[name="w"] {
+                        position: absolute;
+                        visibility: hidden;
+                    }
+                    #w1:checked ~ .s1 {
+                        margin-left: 0;
+                    }
+                    #w2:checked ~ .s1 {
+                        margin-left: -25%;
+                    }
+                    #w3:checked ~ .s1 {
+                        margin-left: -50%;
+                    }
+                    #w4:checked ~ .s1 {
+                        margin-left: -75%;
+                    }
+                    .slide {
+                        width: 25%;
+                        background: url('../resto-img/breakfest.jpg');
+                        background-size: cover;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100vh;
+                            background: rgba(255, 255, 255, .07);
+                        }
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            animation: move 50s infinite;
+                        }
+                        span {
+                            font-size: 2.5em;
+                            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                            position: absolute;
+                            text-align: center;
+                            color: white;
+                            text-shadow: 1px 1px 2px black;
+                            p {background: transparent; width: 70%;}
+                            h2{font-weight: 200;}
+                            h4{font-weight: 100;}
+                        }
+                    }
+
+                    @keyframes move {
+                        0%{margin-left: 0;} 
+                        20%{margin-left: 0%}
+                        25%{margin-left: -100%;}
+                        45%{margin-left: -100%;}
+                        50%{margin-left: -200%;}
+                        70%{margin-left: -200%;}
+                        75%{margin-left: -300%;}
+                        95%{margin-left: -300%;}
+                        100%{margin-left: -400%;}
+                    }
+                }
+                .navigation {
+                    position: absolute;
+                    display: flex;
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    
+                    .bar {
+                        width: 25px;
+                        height: 18px;
+                        border-radius: 20px;
+                        border: 1px solid rgb(255, 255, 255);
+                        margin: 5px 30px; 
+                        background: rgba(216, 216, 216, 0.226);
+                        cursor: pointer;
+                        transition: .4s ease-in-out;
+                        &:focus{background: yellow;}
+                        
+                        &:hover {
+                            background: rgb(240, 240, 240);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .menus-section {
+        overflow: hidden;
+        margin-left: 15%;
+
+        section{
+            width: 100%;
+            height: 100vh;
+            background: rgb(245, 245, 245);
+        }
+    }
+
+    //? this sections are just for devlopemnet
+    .undefined-sections {
+        overflow: hidden;
+        margin-left: 15%;
+
+        section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                text-align: center;
+                font-size: 2.2em;
+                background: #fff;
+                padding: 10px;
+                text-shadow: 0 2px 5px rgba(0,0,0,.5);
+                box-shadow: 0 5px 25px rgba(0,0,0,.5);
+            }
+            &:nth-child(1) {
+                background: rgb(19, 235, 73);
+            }
+            &:nth-child(2) {
+                background: rgb(235, 214, 19);
+            }
+            &:nth-child(3) {
+                background: rgb(209, 95, 50);
+            }
+            &:nth-child(4) {
+                background: rgb(209, 50, 201);
+            }
+        }
+    }
+}
+
+
