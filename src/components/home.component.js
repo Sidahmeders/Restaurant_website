@@ -20,7 +20,23 @@ const IntroNavbar = () => {
         setTimeout(() =>{
             window.scrollTo(0, 0);
         },1000);
-    },[])
+    },[]);
+
+    let toggle = true;
+
+    const toggleMenu = () => {
+        const menuBtn = document.getElementById('menuButton');
+        const sideBar = document.getElementById('sidebar');
+        if(toggle) {
+            menuBtn.classList.add('cross');
+            sideBar.classList.add('show');
+            toggle = false;
+        } else {
+            menuBtn.classList.remove('cross');
+            sideBar.classList.remove('show');
+            toggle = true;
+        }
+    }
 
     return(
         <div className="app">
@@ -42,7 +58,13 @@ const IntroNavbar = () => {
 
             <main>
 
-                <aside className="side-bar">
+                <div id="menuButton" className="menu-btn" onClick={toggleMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <aside id="sidebar" className="side-bar">
                     <a href="/" className="logo">
                       <i className="fab fa-gitkraken"></i>
                       <h1>ZOUJ OU HABA</h1>
@@ -56,12 +78,14 @@ const IntroNavbar = () => {
                         <li><a href="/side"><i className="fa fa-users"></i>About Us</a></li>
                         <li><a href="/side"><i className="fa fa-phone"></i>Booking</a></li>
                     </ul>
+
                     <div className="p">
                         <p>chlef oulad mohamed</p>
                         <p>Rue de salam chorfa</p>
                         <p>email: habazoj@gmail.com</p>
                         <p>phone: 0772670416</p>
                     </div>
+
                 </aside>
 
                 <div className="images-section">
@@ -74,28 +98,28 @@ const IntroNavbar = () => {
                                 <input type="radio" name="w" id="w4"/>
                                 <div className="slide s1">
                                     <img src={breakfest} alt="breakfest" data-aos="zoom-out" />
-                                    <span style={{transform: "translate(150px, 50px)"}}>
+                                    <span style={{transform: "translate(30px, 220px)"}}>
                                       <h2 >the best food in the world</h2>
                                       <p>your flavor matters</p>
                                     </span>
                                 </div>
                                 <div className="slide">
                                     <img src={dishes} alt="dishes" />
-                                    <span style={{transform: "translate(120px, 90px)"}}>
+                                    <span style={{transform: "translate(60px, 100px)"}}>
                                       <h2>Everyday From 10AM To 7PM</h2>
                                       <h4>step in and Feel at Home</h4>
                                     </span>
                                 </div>
                                 <div className="slide">
                                     <img src={cook} alt="cook" />
-                                    <span style={{transform:"translate(200px, 10px)",textAlign:"left"}}>
+                                    <span style={{transform:"translate(50px, 300px)",textAlign:"left"}}>
                                       <h6>our master chef is</h6>
-                                      <h4 style={{fontSize:".7em"}}>miamoto povotkin the winner of master Chef 2012</h4>
+                                      <h4 style={{fontSize:".8em"}}>miamoto povotkin the winner of master Chef 2012</h4>
                                     </span>
                                 </div>
                                 <div className="slide">
                                     <img src={chef} alt="chef" />
-                                    <span style={{transform:"translate(40px, 10px)"}}>
+                                    <span style={{transform:"translate(40px, 100px)"}}>
                                       <h2>get your Table now</h2>
                                       <p>and give it a try</p>
                                     </span>
@@ -113,7 +137,8 @@ const IntroNavbar = () => {
 
                 <div className="menus-section">
                     <section>
-                        
+                        <h2>how are you </h2>
+                        <p>the lorm ispum text i sjust for the dev eraea</p>
                     </section>
                 </div>
 

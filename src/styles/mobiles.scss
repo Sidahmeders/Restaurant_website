@@ -1,36 +1,144 @@
-@mixin mediaXXL {
-    @media (max-width:1050px) {
+@mixin mediaXL {
+    @media (max-width: 1020px) {
         @content;
     }
 }
 
-@mixin mediaXL {
-    
-}
-
 @mixin mediaL {
-    
+    @media (max-width: 850px) {
+        @content;
+    }
 }
 
 @mixin mediaM {
-    
+    @media (max-width: 700px) {
+        @content;
+    }
 }
 
 @mixin mediaS {
-
-}
-
-@include mediaXXL {
-    body {
-        display: none !important;
+    @media (max-width: 450px) {
+        @content;
     }
 }
 
 
+@include mediaXL {
+    main {
+
+        .menu-btn {
+            position: fixed;
+            right: 3%;
+            top: 1%;
+            z-index: 9;
+            cursor: pointer;
+
+            span {
+                display: block;
+                width: 45px;
+                height: 4px;
+                background: red;
+                margin-top: 10px;
+                transition: .5s ease-in-out;
+            }
+            &.cross {
+                span:nth-child(1) {
+                    transform: rotate(46deg) translate(8px, 12px);
+                    box-shadow: 1px 1px 3px rgb(158, 18, 18);
+                    transition: .5s ease-in-out;
+                }
+                span:nth-child(2) {
+                    transform: rotate(-48deg) translate(-2px, -3px);
+                    box-shadow: 1px 1px 3px rgb(145, 11, 11);
+                    transition: .5s ease-in-out;
+                }
+                span:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+        .side-bar {
+            width: 100% !important;
+            height: 9% !important;
+            overflow: hidden;
+            transition: .5s ease-in-out;
+            text-align: center !important;
+
+            .logo{
+                margin-top: -9px !important;
+                transition: .5s ease-in-out !important;
+                display: inline-block !important;
+                h1, p {display: none !important;}
+            }
+
+            &.show{
+                width: 100% !important;
+                height: 100% !important;
+                overflow-y: scroll !important;
+
+                .logo {
+                    margin-top: 2.2em !important;
+                    h1, p {display: block !important;}
+                }
+            }
+        }
+        .images-section {
+            margin-left: 0 !important;
+            background: rgb(46, 46, 46);
+
+            &:before {
+                content: "ZOUJ OU HABA, khoul ou zid";
+                position: absolute;
+                bottom: 4%;
+                left: 26%;
+                font-size: 2em;
+                color: rgb(49, 49, 49);
+                font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+                text-shadow: -2px 2px 7px rgb(214, 214, 175);
+            }
+            section {
+                align-items: flex-start !important;
+
+                .slidershow {
+                    width: 100% !important;
+                    height: 80% !important;
+                    margin-top: 12% !important;
+    
+                    .slides span { font-size: 1.9em !important; }
+                }
+            }
+        }
+        .menus-section {
+            margin-left: 0 !important;
+        }
+        .undefined-sections {
+            margin-left: 0 !important;
+        }
+    }
+}
 
 
+@include mediaL {
+    .images-section .slidershow .slides .slide img {object-fit: cover !important;}
+}
+
+@include mediaM {
+    main {
+        .images-section .slidershow .slides .slide span { font-size: 1.5em !important;}
+        .images-section::before{left: 19% !important;}
+    } 
+    
+   
+}
 
 
+@include mediaS {
+    main {
+        .images-section .slidershow .slides .slide span { font-size: .8em !important;}
+        .side-bar .logo .fa-gitkraken {font-size: 2em !important;}
+        .images-section::before{left: 14% !important; font-size: 1.4em !important; bottom: 5%;}
+    }
+}
 
 
 

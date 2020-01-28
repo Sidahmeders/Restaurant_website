@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-//! please remove this after uncommenting the body
+//! please remove this after
 body{overflow-x: hidden;}
 
 @import './mobiles.scss';
@@ -242,12 +242,12 @@ main {
             display: block;
 
             .fa-gitkraken {
-                font-size: 3em;
+                font-size: 3.5em;
                 color: rgb(114, 116, 107);
                 transform: translate(-5px, 25px);
                 text-shadow: 3px 3px 6px rgb(0, 0, 0);
                 transition: 3s;
-                &:hover {text-shadow: 2px 2px 5px white;}
+                &:hover {text-shadow: 2px 2px 7px white;}
             }
             h1 {
                 display: block;

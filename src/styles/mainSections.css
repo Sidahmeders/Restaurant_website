@@ -86,7 +86,7 @@ main .images-section section .slidershow .slides .slide span {
 }
 
 main .images-section section .slidershow .slides .slide span p {
-  background: transparent;
+  background: rgba(204, 197, 105, 0.3);
   width: 70%;
 }
 
@@ -198,6 +198,8 @@ main .menus-section section {
   width: 100%;
   height: 100vh;
   background: whitesmoke;
+  text-align: center;
+  font-size: 2.2em;
 }
 
 main .undefined-sections {

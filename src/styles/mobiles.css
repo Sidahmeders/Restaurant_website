@@ -1,10 +1,129 @@
-<<<<<<< HEAD
-@media (max-width: 1050px) {
-  body {
+@media (max-width: 1020px) {
+  main .menu-btn {
+    position: fixed;
+    right: 3%;
+    top: 1%;
+    z-index: 9;
+    cursor: pointer;
+  }
+  main .menu-btn span {
+    display: block;
+    width: 45px;
+    height: 4px;
+    background: red;
+    margin-top: 10px;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+  }
+  main .menu-btn.cross span:nth-child(1) {
+    -webkit-transform: rotate(46deg) translate(8px, 12px);
+            transform: rotate(46deg) translate(8px, 12px);
+    -webkit-box-shadow: 1px 1px 3px #9e1212;
+            box-shadow: 1px 1px 3px #9e1212;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+  }
+  main .menu-btn.cross span:nth-child(2) {
+    -webkit-transform: rotate(-48deg) translate(-2px, -3px);
+            transform: rotate(-48deg) translate(-2px, -3px);
+    -webkit-box-shadow: 1px 1px 3px #910b0b;
+            box-shadow: 1px 1px 3px #910b0b;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+  }
+  main .menu-btn.cross span:nth-child(3) {
+    display: none;
+  }
+  main .side-bar {
+    width: 100% !important;
+    height: 9% !important;
+    overflow: hidden;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    text-align: center !important;
+  }
+  main .side-bar .logo {
+    margin-top: -9px !important;
+    -webkit-transition: .5s ease-in-out !important;
+    transition: .5s ease-in-out !important;
+    display: inline-block !important;
+  }
+  main .side-bar .logo h1, main .side-bar .logo p {
     display: none !important;
+  }
+  main .side-bar.show {
+    width: 100% !important;
+    height: 100% !important;
+    overflow-y: scroll !important;
+  }
+  main .side-bar.show .logo {
+    margin-top: 2.2em !important;
+  }
+  main .side-bar.show .logo h1, main .side-bar.show .logo p {
+    display: block !important;
+  }
+  main .images-section {
+    margin-left: 0 !important;
+    background: #2e2e2e;
+  }
+  main .images-section:before {
+    content: "ZOUJ OU HABA, khoul ou zid";
+    position: absolute;
+    bottom: 4%;
+    left: 26%;
+    font-size: 2em;
+    color: #313131;
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+    text-shadow: -2px 2px 7px #d6d6af;
+  }
+  main .images-section section {
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+  }
+  main .images-section section .slidershow {
+    width: 100% !important;
+    height: 80% !important;
+    margin-top: 12% !important;
+  }
+  main .images-section section .slidershow .slides span {
+    font-size: 1.9em !important;
+  }
+  main .menus-section {
+    margin-left: 0 !important;
+  }
+  main .undefined-sections {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .images-section .slidershow .slides .slide img {
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
+  }
+}
+
+@media (max-width: 700px) {
+  main .images-section .slidershow .slides .slide span {
+    font-size: 1.5em !important;
+  }
+  main .images-section::before {
+    left: 19% !important;
+  }
+}
+
+@media (max-width: 450px) {
+  main .images-section .slidershow .slides .slide span {
+    font-size: .8em !important;
+  }
+  main .side-bar .logo .fa-gitkraken {
+    font-size: 2em !important;
+  }
+  main .images-section::before {
+    left: 14% !important;
+    font-size: 1.4em !important;
+    bottom: 5%;
   }
 }
 /*# sourceMappingURL=mobiles.css.map */
-=======
-/* No CSS *//*# sourceMappingURL=mobiles.css.map */
->>>>>>> 1df5ad4205e3e785f13e5a8197502c962fe8779a
