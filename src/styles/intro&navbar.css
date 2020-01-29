@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -140,7 +142,7 @@ body {
 
 main .side-bar {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #333333;
+  background: #303030;
   color: white;
   position: fixed;
   left: 0;
@@ -155,13 +157,13 @@ main .side-bar {
 
 main .side-bar .logo {
   text-align: center;
-  margin-top: 2.2em;
+  margin-top: 1.5em;
   text-decoration: none;
   display: block;
 }
 
 main .side-bar .logo .fa-gitkraken {
-  font-size: 3.5em;
+  font-size: 3em;
   color: #72746b;
   -webkit-transform: translate(-5px, 25px);
           transform: translate(-5px, 25px);
@@ -180,7 +182,7 @@ main .side-bar .logo h1 {
   width: 100%;
   color: #f7f7f7;
   font-weight: 300;
-  text-shadow: 2px 2px 7px #850000;
+  text-shadow: -4px 4px 12px black;
 }
 
 main .side-bar .logo p {
@@ -254,11 +256,11 @@ main .side-bar ul li a i {
 main .side-bar .p {
   font-weight: 100;
   text-align: center;
-  margin-top: 20%;
+  margin-top: 18%;
   text-transform: lowercase;
   color: rgba(250, 244, 158, 0.801);
   font-family: Calibri, 'Trebuchet MS', sans-serif;
-  font-size: .9em;
+  font-size: .8em;
 }
 
 main .side-bar .p p {
@@ -345,7 +347,6 @@ main .images-section section .slidershow .slides .slide img {
 
 main .images-section section .slidershow .slides .slide span {
   font-size: 2.5em;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   position: absolute;
   text-align: center;
   color: white;
@@ -437,19 +438,15 @@ main .images-section section .slidershow .navigation {
 }
 
 main .images-section section .slidershow .navigation .bar {
-  width: 25px;
-  height: 18px;
-  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   border: 1px solid white;
-  margin: 5px 30px;
+  margin: 5px 35px;
   background: rgba(216, 216, 216, 0.226);
-  cursor: pointer;
   -webkit-transition: .4s ease-in-out;
   transition: .4s ease-in-out;
-}
-
-main .images-section section .slidershow .navigation .bar:focus {
-  background: yellow;
 }
 
 main .images-section section .slidershow .navigation .bar:hover {
@@ -463,10 +460,76 @@ main .menus-section {
 
 main .menus-section section {
   width: 100%;
-  height: 100vh;
-  background: whitesmoke;
-  text-align: center;
-  font-size: 2.2em;
+  height: auto;
+  background: #e9dcdc;
+}
+
+main .menus-section .menu-cards .above-line {
+  font-size: 1.7em;
+  margin-left: 1.7em;
+  color: #3d0606;
+}
+
+main .menus-section .menu-cards .line {
+  display: block;
+  width: 90%;
+  margin-left: 3em;
+  height: 2px;
+  background-color: dimgray;
+}
+
+main .menus-section .menu-cards .card-item {
+  width: 100%;
+  height: auto;
+  background: #e6dcdc;
+}
+
+main .menus-section .menu-cards .card-item.event {
+  padding: 6em 0;
+}
+
+main .menus-section .menu-cards .card-item.event h2 {
+  font-size: 2em;
+  font-weight: 200;
+  margin-left: 2em;
+}
+
+main .menus-section .menu-cards .card-item.event h2 span {
+  display: inline-block;
+  padding: 0 6px;
+}
+
+main .menus-section .menu-cards .card-item.event ul {
+  margin-left: 5em;
+  list-style: none;
+  font-size: 1.7em;
+}
+
+main .menus-section .menu-cards .card-item.event ul li {
+  margin-top: 1em;
+}
+
+main .menus-section .menu-cards .card-item.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .menus-section .menu-cards .card-item.menu section {
+  width: 320px;
+  margin-top: 2em;
+  margin-bottom: 2.5em;
+  margin-right: 3em;
+}
+
+main .menus-section .menu-cards .card-item.menu section .list-item {
+  height: 120px;
+  font-size: .9em;
 }
 
 main .undefined-sections {
