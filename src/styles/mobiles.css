@@ -64,7 +64,7 @@
   }
   main .images-section {
     margin-left: 0 !important;
-    background: #2e2e2e;
+    background: #303030;
   }
   main .images-section:before {
     content: "ZOUJ OU HABA, khoul ou zid";
@@ -90,6 +90,9 @@
     font-size: 1.9em !important;
   }
   main .menus-section {
+    margin-left: 0 !important;
+  }
+  main .gallery-section {
     margin-left: 0 !important;
   }
   main .undefined-sections {

@@ -7,6 +7,16 @@
   font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+::-moz-selection {
+  color: #eed9d9;
+  background: #2e2e2e;
+}
+
+::selection {
+  color: #eed9d9;
+  background: #2e2e2e;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -77,7 +87,7 @@ body {
   }
   main .images-section {
     margin-left: 0 !important;
-    background: #2e2e2e;
+    background: #303030;
   }
   main .images-section:before {
     content: "ZOUJ OU HABA, khoul ou zid";
@@ -103,6 +113,9 @@ body {
     font-size: 1.9em !important;
   }
   main .menus-section {
+    margin-left: 0 !important;
+  }
+  main .gallery-section {
     margin-left: 0 !important;
   }
   main .undefined-sections {
@@ -488,6 +501,13 @@ main .menus-section .menu-cards .card-item.event {
   padding: 6em 0;
 }
 
+main .menus-section .menu-cards .card-item.event h1 {
+  color: #970000;
+  font-size: 2.2em;
+  font-weight: 100;
+  margin: 1em;
+}
+
 main .menus-section .menu-cards .card-item.event h2 {
   font-size: 2em;
   font-weight: 200;
@@ -532,48 +552,278 @@ main .menus-section .menu-cards .card-item.menu section .list-item {
   font-size: .9em;
 }
 
-main .undefined-sections {
+main .gallery-section {
   overflow: hidden;
   margin-left: 15%;
 }
 
-main .undefined-sections section {
+main .gallery-section section {
   width: 100%;
-  height: 100vh;
+  height: auto;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e6dcdc), to(white));
+  background: linear-gradient(180deg, #e6dcdc, white);
+}
+
+main .gallery-section section .gallery-textImages {
+  color: #363636;
+}
+
+main .gallery-section section .gallery-textImages .image-one {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 5em;
 }
 
-main .undefined-sections section p {
+main .gallery-section section .gallery-textImages .image-one img {
+  width: 50%;
+  margin-left: 5vw;
+}
+
+main .gallery-section section .gallery-textImages .image-one p {
+  margin: 0 2em;
+}
+
+main .gallery-section section .gallery-textImages .burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10%;
+}
+
+main .gallery-section section .gallery-textImages .burger ul {
+  list-style: none;
+  margin-top: 6%;
+  margin-right: 10vw;
+}
+
+main .gallery-section section .gallery-textImages .burger ul li {
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  margin-top: -1px;
+}
+
+main .gallery-section section .gallery-textImages .burger ul li img {
+  width: 180px;
+  vertical-align: middle;
+}
+
+main .gallery-section section .gallery-textImages .burger ul .close-burger {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  margin-top: -60px;
+}
+
+main .gallery-section section .gallery-textImages .burger p {
+  margin: 3em 7vw;
+}
+
+main .gallery-section section .gallery-textImages .burger p span {
+  font-size: 1.3em;
+  color: crimson;
+}
+
+main .gallery-section section .gallery-textImages .image-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 12%;
+}
+
+main .gallery-section section .gallery-textImages .image-two img {
+  width: 50%;
+  margin: 2vw;
+}
+
+main .gallery-section section .gallery-textImages .image-two p {
+  margin: 2vw;
+}
+
+main .services-section {
+  overflow: hidden;
+  margin-left: 15%;
+}
+
+main .services-section section {
+  width: 100%;
+  height: auto;
+}
+
+main .services-section section .service-textImages .image-one {
+  margin: 10% 0;
+  font-size: 2em;
+  color: #4b4b4b;
   text-align: center;
-  font-size: 2.2em;
-  background: #fff;
-  padding: 10px;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
 }
 
-main .undefined-sections section:nth-child(1) {
-  background: #13eb49;
+main .services-section section .service-textImages .image-one img {
+  width: 65%;
 }
 
-main .undefined-sections section:nth-child(2) {
-  background: #ebd613;
+main .services-section section .service-textImages .image-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 3em;
 }
 
-main .undefined-sections section:nth-child(3) {
-  background: #d15f32;
+main .services-section section .service-textImages .image-two p {
+  color: crimson;
+  width: 40%;
 }
 
-main .undefined-sections section:nth-child(4) {
-  background: #d132c9;
+main .services-section section .service-textImages .image-two img {
+  width: 45%;
+}
+
+main .services-section section .service-textImages .image-two ul {
+  list-style: none;
+  margin-top: 10vh;
+  font-size: 1.5em;
+}
+
+main .services-section section .service-textImages .image-two ul li {
+  color: #424242;
+  font-size: .7em;
+  margin: 1em 3em;
+}
+
+main .services-section section .service-textImages .image-three {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15vh 2vh;
+  text-align: center;
+}
+
+main .services-section section .service-textImages .image-three .romantic-text {
+  margin: 0 20px;
+}
+
+main .services-section section .service-textImages .image-three .romantic-text h2, main .services-section section .service-textImages .image-three .romantic-text h3 {
+  font-weight: 100;
+  color: #8d2323;
+  margin-top: 3vh;
+}
+
+main .services-section section .service-textImages .image-three .romantic-text p {
+  color: #2e2e2e;
+  margin-top: 7px;
+}
+
+main .services-section section .service-textImages .image-three img {
+  width: 50%;
+}
+
+main .about-section {
+  overflow: hidden;
+  margin-left: 15%;
+}
+
+main .about-section section {
+  width: 100%;
+  height: auto;
+}
+
+main .about-section section .about-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+main .about-section section .about-us .about-text {
+  font-size: 1.2em;
+  margin-top: 5vh;
+}
+
+main .about-section section .about-us .about-text h1, main .about-section section .about-us .about-text h3 {
+  font-weight: 200;
+  margin-top: 10vh;
+  color: #31595a;
+}
+
+main .about-section section .about-us .about-text p {
+  margin-top: 2vh;
+  color: #333;
+}
+
+main .about-section section .about-us .about-text a {
+  color: #00a800;
+}
+
+main .about-section section .about-us .about-map {
+  width: 65%;
+  overflow: hidden;
+  margin-top: 25vh;
+}
+
+main .about-section section .about-us .about-map button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+main .booking-section {
+  overflow: hidden;
+  margin-left: 15%;
+}
+
+main .booking-section section {
+  width: 100%;
+  height: auto;
+}
+
+main .booking-section section .find-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 10vh;
+  padding: 3vh 0;
+  background: #e4dada;
+}
+
+main .booking-section section .find-us .item {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: 5vh;
+}
+
+main .booking-section section .find-us .item a {
+  display: block;
+  text-decoration: none;
+  color: #b95146;
+  margin: 7px 0;
 }
 /*# sourceMappingURL=intro&navbar.css.map */

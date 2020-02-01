@@ -7,6 +7,11 @@
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+::selection {
+    color: rgb(238, 217, 217);
+    background: rgb(46, 46, 46);
+  }
+
 //! please remove this after
 body{overflow-x: hidden;}
 
