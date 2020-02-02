@@ -61,7 +61,6 @@ header {
 
         h2 {
             color: rgb(223, 223, 223);
-            z-index: 9;
         }
         .break {
             position: relative;
@@ -194,7 +193,7 @@ header {
                  margin: 0;
                  z-index: 10;
                  color: white;
-                 opacity: 0;
+                 visibility: hidden;
              }
              &:nth-child(1) h2 {
                  animation: fadeText 0.5s linear forwards;
@@ -209,8 +208,8 @@ header {
                  text-shadow: 2px 2px 3px black;
              }
              @keyframes fadeText {
-                 0% {opacity: 0;}
-                 100% {opacity: 100%;}
+                 0% {visibility: hidden;}
+                 100% {visibility: visible;}
              }
         }
     }
