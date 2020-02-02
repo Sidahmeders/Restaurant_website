@@ -576,7 +576,7 @@ header .intro div h2 {
   margin: 0;
   z-index: 10;
   color: white;
-  opacity: 0;
+  visibility: hidden;
 }
 
 header .intro div:nth-child(1) h2 {
@@ -599,19 +599,19 @@ header .intro div:nth-child(3) h2 {
 
 @-webkit-keyframes fadeText {
   0% {
-    opacity: 0;
+    visibility: hidden;
   }
   100% {
-    opacity: 100%;
+    visibility: visible;
   }
 }
 
 @keyframes fadeText {
   0% {
-    opacity: 0;
+    visibility: hidden;
   }
   100% {
-    opacity: 100%;
+    visibility: visible;
   }
 }
 
