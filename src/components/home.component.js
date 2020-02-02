@@ -22,6 +22,7 @@ import couple from '../resto-img/nested-img/couple.jpg';
 
 const IntroNavbar = () => {
 
+    
     AOS.init({
         offset: 200,
         duration: 500,
@@ -76,10 +77,11 @@ const IntroNavbar = () => {
 
     const [selecedHome, setSelectedHome] = useState(null);
 
+
     return(
         <div className="app">
 
-            {/* <header>
+            <header>
                 <div className="loading">
                     <h2>Hungry</h2>
                     <div className="break"></div>
@@ -92,7 +94,7 @@ const IntroNavbar = () => {
                     <div></div>
                 </div>
 
-            </header> */}
+            </header>
 
             <main>
 
@@ -105,8 +107,8 @@ const IntroNavbar = () => {
                 <aside id="sidebar" className="side-bar">
                     <a href="/" className="logo">
                       <i className="fab fa-gitkraken"></i>
-                      <h1>ZOUJ OU HABA</h1>
-                      <p>how fast is fatser</p>  
+                      <h1>ZOUJ OU HABA.</h1>
+                      <p>how fast is fatser.</p>  
                     </a>
                     
                     <ul>
@@ -170,6 +172,7 @@ const IntroNavbar = () => {
                                 <label htmlFor="w4" className="bar"></label>
                             </div>
                         </div>
+                        <div className="under-home"></div>
                     </section>
                 </div>
 
