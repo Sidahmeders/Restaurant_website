@@ -377,7 +377,6 @@ header .loading {
 
 header .loading h2 {
   color: #dfdfdf;
-  z-index: 9;
 }
 
 header .loading .break {
