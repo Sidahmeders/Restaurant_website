@@ -87,17 +87,7 @@ body {
   }
   main .images-section {
     margin-left: 0 !important;
-    background: #303030;
-  }
-  main .images-section:before {
-    content: "ZOUJ OU HABA, khoul o zid";
-    position: absolute;
-    bottom: 4%;
-    left: 26%;
-    font-size: 2em;
-    color: #313131;
-    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
-    text-shadow: -2px 2px 7px #d6d6af;
+    background: #e6dcdc;
   }
   main .images-section section {
     -webkit-box-align: start !important;
@@ -115,6 +105,15 @@ body {
   }
   main .images-section section .slidershow .slides .slide span {
     font-size: 1.9em !important;
+  }
+  main .images-section section .under-home {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 12vh;
+    overflow: hidden;
+    background: url("../resto-img/under.svg");
   }
   main .menus-section {
     margin-left: 0 !important;
@@ -291,6 +290,341 @@ body {
         flex-basis: 75% !important;
     border-bottom: 1px solid #442727;
     padding: 10px 0 !important;
+  }
+}
+
+body {
+  background: #f7f7f7;
+  overflow: hidden;
+  -webkit-animation: hide 1s linear forwards;
+          animation: hide 1s linear forwards;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+
+@-webkit-keyframes hide {
+  0%, 99% {
+    overflow: hidden;
+  }
+  100% {
+    overflow-y: scroll;
+  }
+}
+
+@keyframes hide {
+  0%, 99% {
+    overflow: hidden;
+  }
+  100% {
+    overflow-y: scroll;
+  }
+}
+
+header {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 110vh;
+  overflow: hidden;
+  -webkit-transform: translate(0, -60px);
+          transform: translate(0, -60px);
+  background: #313030;
+  -webkit-animation: remove 1s linear forwards;
+          animation: remove 1s linear forwards;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+
+header .loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2e2d2d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 15;
+  -webkit-animation: load 4.8s linear forwards;
+          animation: load 4.8s linear forwards;
+}
+
+header .loading h2 {
+  color: #dfdfdf;
+}
+
+header .loading .break {
+  position: relative;
+  width: 50%;
+  height: 40px;
+  background: transparent;
+  margin: 0 20px;
+  border: 2px solid rgba(186, 187, 159, 0.5);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .loading .break::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #96947c;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation: animate 4.5s linear forwards;
+          animation: animate 4.5s linear forwards;
+}
+
+header .loading .break::after {
+  content: "eating...";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-align: center;
+  line-height: 35px;
+  color: white;
+  font-size: 20px;
+  mix-blend-mode: difference;
+}
+
+@-webkit-keyframes load {
+  0%, 90% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes load {
+  0%, 90% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+header .intro {
+  position: relative;
+  width: 400px;
+}
+
+header .intro div {
+  position: relative;
+  height: 100px;
+  margin: -30px 0;
+  z-index: 2;
+  -webkit-transform: skewY(-5deg);
+          transform: skewY(-5deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+}
+
+header .intro div:nth-child(2), header .intro div:nth-child(4) {
+  -webkit-transform: skewY(15deg);
+          transform: skewY(15deg);
+  z-index: 1;
+}
+
+header .intro div:nth-child(4) {
+  -webkit-transform: skewY(25deg);
+          transform: skewY(25deg);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  top: -52px;
+}
+
+header .intro div:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+header .intro div:nth-child(1):before, header .intro div:nth-child(3):before {
+  background: linear-gradient(-16deg, #dacea2, #707a7c);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+header .intro div:nth-child(2):before, header .intro div:nth-child(4):before {
+  background: linear-gradient(-16deg, #ddd3a5, #717c7b);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+header .intro div:nth-child(1):before {
+  -webkit-animation: animate 1s linear forwards;
+          animation: animate 1s linear forwards;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-animation-delay: 4.8s;
+          animation-delay: 4.8s;
+}
+
+header .intro div:nth-child(2):before {
+  -webkit-animation: animate 1s linear forwards;
+          animation: animate 1s linear forwards;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation-delay: 5.8s;
+          animation-delay: 5.8s;
+}
+
+header .intro div:nth-child(3):before {
+  -webkit-animation: animate 1s linear forwards;
+          animation: animate 1s linear forwards;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-animation-delay: 6.8s;
+          animation-delay: 6.8s;
+}
+
+header .intro div:nth-child(4):before {
+  -webkit-animation: animate 1s linear forwards;
+          animation: animate 1s linear forwards;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation-delay: 7.8s;
+          animation-delay: 7.8s;
+  width: 75%;
+  left: 0;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+header .intro div:nth-child(1):after, header .intro div:nth-child(3):after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(46, 45, 45, 0.26);
+}
+
+header .intro div h2 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+  color: white;
+  opacity: 0;
+}
+
+header .intro div:nth-child(1) h2 {
+  -webkit-animation: fadeText 0.5s linear forwards;
+          animation: fadeText 0.5s linear forwards;
+  -webkit-animation-delay: 5.8s;
+          animation-delay: 5.8s;
+  font-size: 38px;
+  text-shadow: 2px 2px 3px black;
+}
+
+header .intro div:nth-child(3) h2 {
+  -webkit-animation: fadeText 0.5s linear forwards;
+          animation: fadeText 0.5s linear forwards;
+  -webkit-animation-delay: 7.8s;
+          animation-delay: 7.8s;
+  font-size: 45px;
+  text-shadow: 2px 2px 3px black;
+}
+
+@-webkit-keyframes fadeText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes remove {
+  0%, 98% {
+    visibility: visible;
+  }
+  100% {
+    display: none;
+    visibility: hidden;
+    position: fixed;
+  }
+}
+
+@keyframes remove {
+  0%, 98% {
+    visibility: visible;
+  }
+  100% {
+    display: none;
+    visibility: hidden;
+    position: fixed;
   }
 }
 

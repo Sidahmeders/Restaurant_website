@@ -79,7 +79,7 @@ const IntroNavbar = () => {
     return(
         <div className="app">
 
-            {/* <header>
+            <header>
                 <div className="loading">
                     <h2>Hungry</h2>
                     <div className="break"></div>
@@ -92,7 +92,7 @@ const IntroNavbar = () => {
                     <div></div>
                 </div>
 
-            </header> */}
+            </header>
 
             <main>
 
@@ -170,6 +170,7 @@ const IntroNavbar = () => {
                                 <label htmlFor="w4" className="bar"></label>
                             </div>
                         </div>
+                        <div className="under-home"></div>
                     </section>
                 </div>
 
