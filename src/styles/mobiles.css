@@ -179,6 +179,15 @@
 }
 
 @media (max-width: 450px) {
+  header .loading {
+    font-size: .8em !important;
+  }
+  header .loading .break {
+    height: 35px !important;
+  }
+  header .loading .break:after {
+    font-size: 10px !important;
+  }
   main .images-section section .slidershow .slides .slide span {
     font-size: .8em !important;
   }

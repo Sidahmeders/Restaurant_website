@@ -169,10 +169,16 @@
             ul {margin-left: 2em !important;}
         }
     } 
-
 }
 
 @include mediaS {
+    header .loading {
+        font-size: .8em !important; 
+        .break {
+            height: 35px !important;
+            &:after {font-size: 10px !important;}
+        }
+    }
     main {
         .images-section section .slidershow .slides .slide span {font-size: .8em !important;}
         .side-bar .logo .fa-gitkraken {font-size: 2em !important;}
@@ -224,6 +230,5 @@
             .item {flex-basis: 75% !important; border-bottom: 1px solid rgb(68, 39, 39); padding: 10px 0 !important;}
         }
     }
-
 }
 

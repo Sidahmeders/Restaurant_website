@@ -22,7 +22,7 @@ import couple from '../resto-img/nested-img/couple.jpg';
 
 const IntroNavbar = () => {
 
-    
+
     AOS.init({
         offset: 200,
         duration: 500,
@@ -88,9 +88,9 @@ const IntroNavbar = () => {
                     <h2>Satisfied</h2>
                 </div>
                 <div className="intro">
-                    <div><h2>Wellcome To Our Restaurant</h2></div>
+                    <div><h2>Welcome To Our Restaurant</h2></div>
                     <div></div>
-                    <div><h2>Zoujj Ou Haba</h2></div>
+                    <div><h2>Zouj Ou Haba</h2></div>
                     <div></div>
                 </div>
 
@@ -107,8 +107,8 @@ const IntroNavbar = () => {
                 <aside id="sidebar" className="side-bar">
                     <a href="/" className="logo">
                       <i className="fab fa-gitkraken"></i>
-                      <h1>ZOUJ OU HABA.</h1>
-                      <p>how fast is fatser.</p>  
+                      <h1>ZOUJ OU HABA</h1>
+                      <p>how fast is fatser</p>  
                     </a>
                     
                     <ul>

@@ -202,6 +202,15 @@ body {
 }
 
 @media (max-width: 450px) {
+  header .loading {
+    font-size: .8em !important;
+  }
+  header .loading .break {
+    height: 35px !important;
+  }
+  header .loading .break:after {
+    font-size: 10px !important;
+  }
   main .images-section section .slidershow .slides .slide span {
     font-size: .8em !important;
   }
@@ -368,6 +377,7 @@ header .loading {
 
 header .loading h2 {
   color: #dfdfdf;
+  z-index: 9;
 }
 
 header .loading .break {
@@ -381,7 +391,7 @@ header .loading .break {
           box-sizing: border-box;
 }
 
-header .loading .break::before {
+header .loading .break:before {
   content: "";
   position: absolute;
   top: 0;
@@ -395,7 +405,7 @@ header .loading .break::before {
           animation: animate 4.5s linear forwards;
 }
 
-header .loading .break::after {
+header .loading .break:after {
   content: "eating...";
   position: absolute;
   top: 0;
