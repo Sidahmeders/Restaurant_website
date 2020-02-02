@@ -67,8 +67,8 @@ const IntroNavbar = () => {
     },[]);
 
     const [viewPort, setViewPort] = useState({
-        latitude: 45.4208,
-        longitude: -75.6940,
+        latitude: 45.4198,
+        longitude: -75.6925,
         width: "100vw",
         height: "100vh",
         zoom: 16
@@ -110,11 +110,11 @@ const IntroNavbar = () => {
                     </a>
                     
                     <ul>
-                        <li><a href="#menu"><i className="fa fa-th-list"></i>Menus</a></li>
-                        <li><a href="#gallery"><i className="fa fa-images"></i>Gallery</a></li>
-                        <li><a href="#sercices"><i className="fa fa-carrot"></i>Services</a></li>
-                        <li><a href="#about"><i className="fa fa-users"></i>About Us</a></li>
-                        <li><a href="#booking"><i className="fa fa-phone"></i>Booking</a></li>
+                        <li onClick={toggleMenu}><a href="#menu"><i className="fa fa-th-list"></i>Menus</a></li>
+                        <li onClick={toggleMenu}><a href="#gallery"><i className="fa fa-images"></i>Gallery</a></li>
+                        <li onClick={toggleMenu}><a href="#sercices"><i className="fa fa-carrot"></i>Services</a></li>
+                        <li onClick={toggleMenu}><a href="#about"><i className="fa fa-users"></i>About Us</a></li>
+                        <li onClick={toggleMenu}><a href="#booking"><i className="fa fa-phone"></i>Booking</a></li>
                     </ul>
 
                     <div className="p">
@@ -143,7 +143,7 @@ const IntroNavbar = () => {
                                 </div>
                                 <div className="slide">
                                     <img src={dishes} alt="dishes" />
-                                    <span style={{transform: "translate(60px, 100px)"}}>
+                                    <span style={{transform: "translate(40px, 100px)"}}>
                                       <h2>Everyday From 10AM To 9PM</h2>
                                       <h4>step in and Feel at Home</h4>
                                     </span>
@@ -445,7 +445,7 @@ const IntroNavbar = () => {
                                 <img src={beef} alt="beef" data-aos="fade-right" />
                                 <p data-aos="slide-up">
                                 The kinds of dishes to be produced obviously determine the jobs that need to be done. The menu is, 
-                                in fact, the basis for the entire operation.Because of its importance, we devote a whole chapter to
+                                in fact, the basis for the entire operation. Because of its importance, we devote a whole chapter to
                                 a study of the menu to get the best flavor.
                                 </p>
                             </div>
@@ -585,8 +585,8 @@ const IntroNavbar = () => {
                             </div>
                             <div className="item">
                                 <p>Follow us on:</p>
-                                <a href="http://facebook.com" target="blank"><i className="fab fa-facebook"></i>facebook</a>
-                                <a href="http://instagram.com" target="blank"><i className="fab fa-instagram"></i>instagram</a>
+                                <a href="http://facebook.com" target="blank"><i className="fab fa-facebook"></i> facebook</a>
+                                <a href="http://instagram.com" target="blank"><i className="fab fa-instagram"></i> instagram</a>
                             </div>
                             <div className="item">
                                 <p>Copyright © 2020 Zouj_ou_Haba - All rights reserved</p>

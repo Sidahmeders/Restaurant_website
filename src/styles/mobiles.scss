@@ -87,7 +87,7 @@
             background: rgb(48, 48, 48);
 
             &:before {
-                content: "ZOUJ OU HABA, khoul ou zid";
+                content: "ZOUJ OU HABA, khoul o zid";
                 position: absolute;
                 bottom: 4%;
                 left: 26%;
@@ -104,7 +104,10 @@
                     height: 80% !important;
                     margin-top: 12% !important;
     
-                    .slides span { font-size: 1.9em !important; }
+                    .slides .slide {
+                        img { object-fit: cover !important; }
+                        span { font-size: 1.9em !important; }
+                    } 
                 }
             }
         }
@@ -114,33 +117,115 @@
         .gallery-section {
             margin-left: 0 !important;
         }
-        .undefined-sections {
+        .booking-section {
             margin-left: 0 !important;
         }
     }
 }
 
-
 @include mediaL {
-    .images-section .slidershow .slides .slide img {object-fit: cover !important;}
+    main .services-section {
+        margin-left: 0 !important;
+
+        section .service-textImages {
+
+            .image-one {
+                img {width: 90% !important;}
+            }
+            .image-two {
+                img {width: 80% !important;}
+                p {width: 60% !important; margin-top: 3vh !important; text-align: center !important;}
+            }
+            .image-three {
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                margin: 8vh 2vh !important;
+                .romantic-text{order: 2 !important; width: 85% !important;}
+                img {width: 80% !important;}
+            }
+        }
+    } 
+    main .about-section {
+        margin-left: 0 !important;
+        section .about-us {
+            justify-content: center !important;
+            .about-text {
+                margin-top: 0 !important;
+                h1, h3 {margin-top: 4vh !important;}
+                p {margin-top: 6px !important;}
+            }
+            .about-map {margin-top: 7vh !important;}
+        }
+    }
 }
 
 @include mediaM {
     main {
-        .images-section .slidershow .slides .slide span { font-size: 1.5em !important;}
+        .images-section section .slidershow .slides .slide span { font-size: 1.5em !important;}
         .images-section::before{left: 19% !important;}
+        .about-section section .about-us .about-map {height: 28vh !important;}
+        .menus-section .menu-cards .card-item.event { 
+            font-size: .8em !important;
+            h2 {margin-left: 1em !important;}
+            ul {margin-left: 2em !important;}
+        }
     } 
-    
-   
-}
 
+}
 
 @include mediaS {
     main {
-        .images-section .slidershow .slides .slide span { font-size: .8em !important;}
+        .images-section section .slidershow .slides .slide span {font-size: .8em !important;}
         .side-bar .logo .fa-gitkraken {font-size: 2em !important;}
         .images-section::before{left: 14% !important; font-size: 1.4em !important; bottom: 5%;}
+        .menus-section section .menu-cards {
+            .card-item.event {font-size: .5em !important;}
+            .above-line {font-size: 1.5em !important; margin-left: .7em !important;}
+            .line {margin-left: 1em !important;}
+            .card-item.menu section {
+
+                margin-top: 1.5em !important;
+                margin-bottom: 2em !important;
+                margin-right: 1em !important;
+            }
+        }
+        .gallery-section section .gallery-textImages {
+            .image-one {
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                img{width: 90% !important;margin-left: 0 !important; margin-bottom: 5vh !important;}
+            }
+            .image-two {
+                text-align: center !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                p {margin: 5px 5vw !important;}
+                img {width: 90% !important; margin: 5vh !important;}
+            }
+        }
+        .services-section section .service-textImages {
+            .image-one {
+                font-size: 1.7em !important;
+                img {width: 95% !important;}
+            }
+            .image-two {
+                margin: 0 !important;
+                font-size: .9em !important;
+               p {color: rgb(145, 74, 74) !important;}
+               ul {font-size: 1.1em !important; margin-left: 5vw !important;}
+            }
+            .image-three {
+                font-size: .7em !important;
+                img {width: 95% !important;}
+            }
+        }
+        .about-section section .about-us .about-text {font-size: 1em !important;}
+        .booking-section section .find-us { 
+            flex-wrap: wrap !important;
+            .item {flex-basis: 75% !important; border-bottom: 1px solid rgb(68, 39, 39); padding: 10px 0 !important;}
+        }
     }
+
 }
 
 
