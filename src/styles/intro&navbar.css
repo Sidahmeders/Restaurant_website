@@ -602,7 +602,7 @@ header .intro div:nth-child(3) h2 {
     opacity: 0;
   }
   100% {
-    opacity: 100%;
+    opacity: 1;
   }
 }
 
@@ -611,7 +611,7 @@ header .intro div:nth-child(3) h2 {
     opacity: 0;
   }
   100% {
-    opacity: 100%;
+    opacity: 1;
   }
 }
 
